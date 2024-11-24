@@ -62,7 +62,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				LiveExtensionOfflineAttributes.swift,
-				ProgressViewStyles.swift,
 			);
 			target = B47A421B2CF37F1E00A6EEC5 /* LiveActivityOfflineDemo */;
 		};

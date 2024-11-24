@@ -10,10 +10,10 @@ import SwiftUI
 struct StartProgressStyle: ProgressViewStyle {
   func makeBody(configuration: Configuration) -> some View {
     ProgressView(configuration)
-      .tint(Color.blue)
+      .tint(Color.pre)
       .cornerRadius(0)
       .labelsHidden()
-      .scaleEffect(x: 1, y: 1.5, anchor: .center)
+      .scaleEffect(x: 1, y: 2.5, anchor: .center)
   }
 }
 
@@ -21,10 +21,10 @@ struct StartProgressStyle: ProgressViewStyle {
 struct MiddleProgressStyle: ProgressViewStyle {
   func makeBody(configuration: Configuration) -> some View {
     ProgressView(configuration)
-      .tint(Color.green)
+      .tint(Color.during)
       .cornerRadius(0)
       .labelsHidden()
-      .scaleEffect(x: 1, y: 1.5, anchor: .center)
+      .scaleEffect(x: 1, y: 2.5, anchor: .center)
   }
 }
 
@@ -32,10 +32,10 @@ struct MiddleProgressStyle: ProgressViewStyle {
 struct EndProgressStyle: ProgressViewStyle {
   func makeBody(configuration: Configuration) -> some View {
     ProgressView(configuration)
-      .tint(Color.yellow)
+      .tint(Color.post)
       .cornerRadius(0)
       .labelsHidden()
-      .scaleEffect(x: 1, y: 1.5, anchor: .center)
+      .scaleEffect(x: 1, y: 2.5, anchor: .center)
   }
 }
  

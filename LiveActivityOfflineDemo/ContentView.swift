@@ -41,8 +41,8 @@ struct ContentView: View {
     }
     
     func createLiveActivity() {
-        let startTime = .now + 15
-        let endTime = .now + 120
+        let startTime = Date.now + 10
+        let endTime = .now + 50
         let attributes = LiveActivityExtensionAttributes(startTime: startTime, endTime: endTime, name: "smiley")
         let state = LiveActivityExtensionAttributes.LiveActivityState(emoji: "😄")
         let content = ActivityContent(state: state, staleDate: endTime)
