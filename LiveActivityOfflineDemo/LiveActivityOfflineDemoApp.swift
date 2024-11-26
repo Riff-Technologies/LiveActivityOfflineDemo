@@ -2,7 +2,7 @@
 //  LiveActivityOfflineDemoApp.swift
 //  LiveActivityOfflineDemo
 //
-//  Created by Invitation Homes on 11/24/24.
+//  Created by Riff-Tech on 11/24/24.
 //
 
 import SwiftUI

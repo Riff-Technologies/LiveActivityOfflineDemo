@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  LiveActivityOfflineDemo
 //
-//  Created by Invitation Homes on 11/24/24.
+//  Created by Riff-Tech on 11/24/24.
 //
 
 import SwiftUI
@@ -17,8 +17,10 @@ struct ContentView: View {
             Form {
                 Section("Activity Management") {
                     Button(action: {
-                        createLiveActivity()
-                        refreshActivitiesState()
+                        Task {
+                            await createLiveActivity()
+                            refreshActivitiesState()
+                        }
                     }) {
                         Text("Create Live Activity")
                     }
@@ -40,10 +42,17 @@ struct ContentView: View {
         }
     }
     
-    func createLiveActivity() {
+    func createLiveActivity() async {
+        // attempt to download the image
+        var localImageUrl: URL? = nil
+        if let imageUrl = URL(string: "https://picsum.photos/200") {
+          localImageUrl = try? await downloadImage(from: imageUrl)
+          print("saved resized image successfully")
+        }
+        
         let startTime = Date.now + 10
         let endTime = .now + 50
-        let attributes = LiveActivityExtensionAttributes(startTime: startTime, endTime: endTime, name: "smiley")
+        let attributes = LiveActivityExtensionAttributes(startTime: startTime, endTime: endTime, name: "smiley", image: localImageUrl?.absoluteString)
         let state = LiveActivityExtensionAttributes.LiveActivityState(emoji: "😄")
         let content = ActivityContent(state: state, staleDate: endTime)
         

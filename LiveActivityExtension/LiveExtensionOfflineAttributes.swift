@@ -2,7 +2,7 @@
 //  LiveExtensionOfflineAttributes.swift
 //  LiveActivityOfflineDemo
 //
-//  Created by Invitation Homes on 11/24/24.
+//  Created by Riff-Tech on 11/24/24.
 //
 
 import Foundation
@@ -19,5 +19,6 @@ struct LiveActivityExtensionAttributes: ActivityAttributes {
     var startTime: Date
     var endTime: Date
     var name: String
+    var image: String?
     var id = UUID()
 }
