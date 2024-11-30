@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LogoView: View {
     var body: some View {
-        Image(systemName: "heart.fill")
+        Image(systemName: "star.fill")
             .resizable()
             .scaledToFit()
             .foregroundStyle(Color.post)

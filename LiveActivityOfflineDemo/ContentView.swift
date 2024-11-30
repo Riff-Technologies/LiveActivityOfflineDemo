@@ -52,7 +52,9 @@ struct ContentView: View {
         
         let startTime = Date.now + 10
         let endTime = .now + 50
-        let attributes = LiveActivityExtensionAttributes(startTime: startTime, endTime: endTime, name: "smiley", image: localImageUrl?.absoluteString)
+        // get a random number between 1 and 100
+        let randomNumber = Int.random(in: 1...100)
+        let attributes = LiveActivityExtensionAttributes(startTime: startTime, endTime: endTime, name: "\(randomNumber)", image: localImageUrl?.absoluteString)
         let state = LiveActivityExtensionAttributes.LiveActivityState(emoji: "😄")
         let content = ActivityContent(state: state, staleDate: endTime)
         
