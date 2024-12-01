@@ -40,6 +40,9 @@ struct ContentView: View {
             }
             .navigationTitle("Live Activity Demo")
         }
+.onChange(of: scenePhase) { (newScenePhase, _) in
+    endStaleActivities()
+}
     }
     
     func createLiveActivity() async {
@@ -88,6 +91,34 @@ struct ContentView: View {
             var activities = Activity<LiveActivityExtensionAttributes>.activities
             activities.sort { $0.id < $1.id }
             self.activities = activities
+        }
+    }
+    
+func endStaleActivities() {
+    Task {
+        for activity in activities {
+            if let staleDate = activity.content.staleDate, staleDate <= Date.now {
+                let endTime = Date.now + 1
+                let state = LiveActivityExtensionAttributes.LiveActivityState(emoji: "😄")
+                let content = ActivityContent(state: state, staleDate: endTime)
+                await activity.end(content, dismissalPolicy: .immediate)
+            }
+        }
+        
+        refreshActivitiesState()
+    }
+}
+    
+    func end(activityId: String) {
+        Task {
+            let activity = activities.first { act in
+                act.id == activityId
+            }
+            guard let activity else { return }
+            let endTime = Date.now + 1
+            let state = LiveActivityExtensionAttributes.LiveActivityState(emoji: "😄")
+            let content = ActivityContent(state: state, staleDate: endTime)
+            await activity.end(content, dismissalPolicy: .immediate)
         }
     }
 }

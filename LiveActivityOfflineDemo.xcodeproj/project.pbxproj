@@ -10,6 +10,7 @@
 		B47A42362CF3803200A6EEC5 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47A42352CF3803200A6EEC5 /* WidgetKit.framework */; };
 		B47A42382CF3803200A6EEC5 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B47A42372CF3803200A6EEC5 /* SwiftUI.framework */; };
 		B47A42472CF3803400A6EEC5 /* LiveActivityExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B47A42332CF3803200A6EEC5 /* LiveActivityExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B4AFDD8D2CFCCBE7009C1E6C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B4AFDD8C2CFCCBE7009C1E6C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		B47A42352CF3803200A6EEC5 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B47A42372CF3803200A6EEC5 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B47A42612CF3D9A700A6EEC5 /* LiveActivityExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivityExtensionExtension.entitlements; sourceTree = "<group>"; };
+		B4AFDD8C2CFCCBE7009C1E6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -111,6 +113,7 @@
 		B47A42132CF37F1E00A6EEC5 = {
 			isa = PBXGroup;
 			children = (
+				B4AFDD8C2CFCCBE7009C1E6C /* README.md */,
 				B47A42612CF3D9A700A6EEC5 /* LiveActivityExtensionExtension.entitlements */,
 				B47A421E2CF37F1E00A6EEC5 /* LiveActivityOfflineDemo */,
 				B47A42392CF3803200A6EEC5 /* LiveActivityExtension */,
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AFDD8D2CFCCBE7009C1E6C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
