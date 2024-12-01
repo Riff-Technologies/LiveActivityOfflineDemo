@@ -53,7 +53,7 @@ struct LiveActivityExtensionLiveActivity: Widget {
             .widgetURL(URL(string: URLPrefix))
             .keylineTint(Color.pre)
         }
-        .supplementalActivityFamilies([.small])
+        .supplementalActivityFamilies([.small, .medium])
     }
 }
 
